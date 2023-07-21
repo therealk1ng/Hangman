@@ -60,8 +60,9 @@ while Exit == "False":
     Word = ['_'] * len(Letters2)
     print(f"The Word is {len(Random_Word)} characters Long.")
     while Wrong < 6:
+        Word_Blank = ' '.join(Word)
         Hangman(Wrong)
-        print(Word)
+        print(Word_Blank)
         Valid2 = "No"
         Valid3 = "No"
         alphabets = ['A','B','C','D','E','F','G','H','I','K','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
@@ -102,7 +103,9 @@ while Exit == "False":
 
 
     Hangman(Wrong)
-    print(Word)
+    print(Word_Blank)
+    print("\n")
+    print("\n")
     if Wrong < 6:
         print("You Won.")
     elif Wrong >= 6:
@@ -124,5 +127,6 @@ while Exit == "False":
             Valid4 = "Yes"
         else:
             Valid4 = "No"
+            
 print("\n")
 print("Goodbye, tysm for Playing..")
